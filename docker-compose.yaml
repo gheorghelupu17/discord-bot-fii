@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=main
+      - MONGO_INITDB_ROOT_PASSWORD=Admin1234!sqldb90
+      - MONGO_INITDB_DATABASE=bot-db
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "37017:27017"
